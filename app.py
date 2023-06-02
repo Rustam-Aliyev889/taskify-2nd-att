@@ -63,8 +63,8 @@ def new_meeting():
     conn.close()
     return redirect(url_for('meetings'))
 
-@app.route("/update", methods=['POST'])
-def update():
+@app.route("/update/<id>", methods=['POST'])
+def update(id):
     conn = db_conn()
     cur = conn.cursor()
     topic = request.form["topic"]
@@ -75,17 +75,30 @@ def update():
     conn.commit()
     return redirect(url_for('add_meetings'))
 
-@app.route('/delete', methods=['POST'])
-def delete():
+#@app.route('/delete', methods=['POST', 'GET'])
+#def delete():
+ #   conn = db_conn()
+ #   cur = conn.cursor()
+  #  id = request.form['id']
+  #  cur.execute('''DELETE FROM meetings WHERE id = %s''',(id))
+  #  conn.commit()
+  #  cur.close()
+  #  conn.close()
+   # return redirect(url_for('meetings'))
+
+@app.route('/delete <id>') #, methods=['POST', 'GET'])
+def delete(id):
     conn = db_conn()
     cur = conn.cursor()
-    id = request.form['id']
-    #print(id)
-    cur.execute('''DELETE FROM meetings WHERE id=%s''', (id,))
+   # id = request.form['id']
+    print("ID ="  + id)
+    cur.execute('''DELETE FROM meetings WHERE id = %s''',(id))
     conn.commit()
     cur.close()
     conn.close()
     return redirect(url_for('meetings'))
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
