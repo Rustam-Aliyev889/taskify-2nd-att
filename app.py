@@ -19,14 +19,7 @@ def db_conn():
 
 @app.route("/")
 def home():
-    #conn = db_conn()
-    #cur = conn.cursor()
-    #cur.execute('''SELECT * FROM meetings''')
-    #meetings = cur.fetchall()
-    #cur.close()
-    #conn.close()
-    #print(meetings)
-    return render_template("base.html") #meetings= meetings )
+    return render_template("base.html")
 
 
 
@@ -63,13 +56,13 @@ def new_meeting():
     conn.close()
     return redirect(url_for('meetings'))
 
-@app.route("/update/<id>", methods=['POST'])
-def update(id):
+@app.route("/update", methods=['POST','GET'])
+def update(id,topic,department,comment):
     conn = db_conn()
     cur = conn.cursor()
-    topic = request.form["topic"]
-    department = request.form["department"]
-    comment = request.form["comment"]
+    #topic = request.form["topic"]
+    #department = request.form["department"]
+    #comment = request.form["comment"]
     cur.execute('''UPDATE meetings SET topic=%s, department=%s, comment=%s WHERE id=%s''', (topic, department, comment, id))
     cur.execute()
     conn.commit()
@@ -91,7 +84,6 @@ def delete(id):
     conn = db_conn()
     cur = conn.cursor()
    # id = request.form['id']
-    print("ID ="  + id)
     cur.execute('''DELETE FROM meetings WHERE id = %s''',(id))
     conn.commit()
     cur.close()
