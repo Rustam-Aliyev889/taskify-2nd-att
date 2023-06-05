@@ -18,7 +18,7 @@
           <h5 class="card-title">Time: {{row[3]}}</h5>
           <h5 class="card-title">Department Of {{row[4]}}</h5>
           <p class="card-text">{{row[5]}}</p>
-          <a href="/update {{row[0],[1],[2],[3]}}" class="btn btn-warning btn-sm">Edit</a>
+          <a href="/edit/{{row[0]}}" class="btn btn-warning btn-sm">Edit</a>
           <a href="/delete {{row[0]}}" class="btn btn-danger btn-delete btn-sm">Delete</a>
         </div>
       </div>
@@ -50,7 +50,7 @@
           <td>{{row[4]}}</td>
           <td>{{row[5]}}</td>
           <td width="140">
-            <a href="/update {{row[0]}}" class="btn btn-warning btn-sm">Edit</a>
+            <a href="/edit/{{row[0]}}" class="btn btn-warning btn-sm">Edit</a>
             <a href="/delete {{row[0]}}" class="btn btn-danger btn-delete btn-sm">Delete</a>
             <!--<form action="/delete" method="post">
                 <input type="hidden" name="id" value="{{row[0]}}">

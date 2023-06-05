@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="text-primary text-center mt-4" style="color: beige; font-family: cursive;">Update Meeting</h3>
+
+<form action="/update/{{meetings.id}}" method="POST" style="color: beige; font-family: cursive; font-size: large;">
+    <div class="col-6 mx-auto">
+        <label for="topic" class="form-label">Topic</label>
+        <input type="text" class="form-control" id="topic" placeholder="Enter topic" value="{{meetings.topic}}" name="topic">
+    </div>
+    <div class="col-6 mx-auto">
+        <label for="startDate">Date</label>
+        <input id="startDate" class="form-control" type="date" value="{{meetings.date}}" name="date" />
+    </div>
+    <div class="col-6 mx-auto">
+        <label for="time">Time</label>
+        <input id="time" class="form-control" type="time" value="{{meetings.time}}" name="time" />
+    </div>
+    <div class="col-6 mx-auto">
+        <label class="form-check-label"> Choose department
+            <select class="form-select" aria-label="select menu" value="{{meetings.department}}" name="department">
+                <option selected>Browse departments</option>
+                <option >Engineering</option>
+                <option >Marketing</option>
+                <option >Sales</option>
+                <option >HR</option>
+            </select>
+        </label>
+    </div>
+    <div class="col-6 mx-auto">
+        <label for="comment">Comments:</label>
+        <textarea class="form-control" rows="3" id="comments" value="{{meetings.value}}" name="comments"></textarea>
+    </div>
+    <div class="container">
+        <div class="col-md-12 text-center mt-4 mb-4">
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </div>
+</form>
+
+
+{% endblock %}
