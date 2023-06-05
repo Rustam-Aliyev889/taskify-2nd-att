@@ -46,10 +46,12 @@ def new_meeting():
     conn = db_conn()
     cur = conn.cursor()
     topic = request.form["topic"]
+    date = request.form["date"]
+    time = request.form["time"]
     department = request.form["department"]
     comments = request.form["comments"]
     #cur.execute('''INSERT INTO meetings (topic, department, comments) VALUES(%s, %s, %s)''', (topic, department, comments))
-    query_string="INSERT INTO meetings (topic, department, comments) VALUES ('" + topic + "','" +  department + "','" +  comments + "');"
+    query_string="INSERT INTO meetings (topic, date, time, department, comments) VALUES ('" + topic + "','" + date + "','" + time + "','" +  department + "','" +  comments + "');"
     cur.execute(query_string)
     conn.commit()
     cur.close()
@@ -57,16 +59,16 @@ def new_meeting():
     return redirect(url_for('meetings'))
 
 @app.route("/update", methods=['POST','GET'])
-def update(id,topic,department,comment):
+def update():#id,topic,department,comment):
     conn = db_conn()
     cur = conn.cursor()
-    #topic = request.form["topic"]
-    #department = request.form["department"]
-    #comment = request.form["comment"]
-    cur.execute('''UPDATE meetings SET topic=%s, department=%s, comment=%s WHERE id=%s''', (topic, department, comment, id))
+    topic = request.form["topic"]
+    department = request.form["department"]
+    comment = request.form["comment"]
+    cur.execute('''UPDATE meetings SET topic=%s, department=%s, comment=%s WHERE id=%s''', (id,)) #topic, department, comment,))
     cur.execute()
     conn.commit()
-    return redirect(url_for('add_meetings'))
+    return redirect(url_for('new_meeting'))
 
 #@app.route('/delete', methods=['POST', 'GET'])
 #def delete():
