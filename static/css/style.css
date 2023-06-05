@@ -1,6 +1,6 @@
 body {
     display: flex;
-    min-height: 100vh;
+    min-height: 119vh;
     flex-direction: column;
 }
 
@@ -17,3 +17,7 @@ main {
     font-family: cursive;
     text-align: center;
   }
+
+img {
+    z-index: -3;
+}

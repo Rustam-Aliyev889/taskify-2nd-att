@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="text-primary text-center" style="font-family: cursive;">Meetings</h3>
+<h3 class="text-primary text-center mt-4" style="font-family: cursive;">Meetings</h3>
 
 <div class="d-grid gap-2 col-3 mt-2 mx-auto">
     <a href="{{ url_for('add_meeting')}}" class="btn btn-primary" role="button" style="color: beige; font-family: cursive;">Add Meeting</a>
@@ -13,8 +13,8 @@
     <div class="col-sm-4 mb-sm-0">
       <div class="card text-bg-primary">
         <div class="card-body" style="color: beige; font-family: cursive;">
-          <h5 class="card-title">{{row[2]}}</h5>
-          <h4 class="card-title">{{row[1]}}</h4>
+          <h4 class="card-title">{{row[2]}}</h4>
+          <h5 class="card-title">{{row[1]}}</h5>
           <p class="card-text">{{row[3]}}</p>
           <a href="/update {{row[0],[1],[2],[3]}}" class="btn btn-warning btn-sm">Edit</a>
           <a href="/delete {{row[0]}}" class="btn btn-danger btn-delete btn-sm">Delete</a>

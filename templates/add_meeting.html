@@ -1,17 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="text-primary text-center " style="color: beige; font-family: cursive;">Add Meeting</h3>
+<h3 class="text-primary text-center mt-4" style="color: beige; font-family: cursive;">Add Meeting</h3>
 
-<form action="{{ url_for('new_meeting') }}" method="POST">
+<form action="{{ url_for('new_meeting') }}" method="POST" style="color: beige; font-family: cursive; font-size: large;">
     <div class="col-6 mx-auto">
         <label for="topic" class="form-label">Topic</label>
         <input type="text" class="form-control" id="topic" placeholder="Enter topic" name="topic">
     </div>
-    <!--<div class="col-6 mx-auto">
+    <div class="col-6 mx-auto">
         <label for="startDate">Date</label>
         <input id="startDate" class="form-control" type="date" />
-    </div>-->
+    </div>
+    <div class="col-6 mx-auto">
+        <label for="time">Time</label>
+        <input id="time" class="form-control" type="time" />
+    </div>
     <div class="col-6 mx-auto">
         <label class="form-check-label"> Choose department
             <select class="form-select" aria-label="select menu" name="department">

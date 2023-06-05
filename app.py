@@ -84,7 +84,7 @@ def delete(id):
     conn = db_conn()
     cur = conn.cursor()
    # id = request.form['id']
-    cur.execute('''DELETE FROM meetings WHERE id = %s''',(id))
+    cur.execute('''DELETE FROM meetings WHERE id = %s''',(id,))
     conn.commit()
     cur.close()
     conn.close()
