@@ -2,6 +2,10 @@
 {% block content %}
 
 <h3 class="text-primary text-center mt-4">Tasks</h3>
+
+<div class="d-grid gap-2 col-3 mt-2 mx-auto">
+    <a href="{{ url_for('add_task')}}" class="btn btn-primary" role="button" style="color: beige; font-family: cursive;">Add Task</a>
+</div>
   
 
 {% endblock %}

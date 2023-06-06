@@ -32,9 +32,6 @@ def meetings():
     conn.close()
     return render_template("meetings.html", meetings= meetings)
 
-@app.route('/tasks')
-def tasks():
-    return render_template('tasks.html')
 
 @app.route('/add_meeting')
 def add_meeting():
@@ -49,7 +46,6 @@ def new_meeting():
     time = request.form["time"]
     department = request.form["department"]
     comments = request.form["comments"]
-    #cur.execute('''INSERT INTO meetings (topic, department, comments) VALUES(%s, %s, %s)''', (topic, department, comments))
     query_string="INSERT INTO meetings (topic, date, time, department, comments) VALUES ('" + topic + "','" + date + "','" + time + "','" +  department + "','" +  comments + "');"
     cur.execute(query_string)
     conn.commit()
@@ -93,9 +89,6 @@ def update_meetings(id):
 
 
 
-
-
-
 #@app.route("/update", methods=['POST','GET'])
 #def update():#id,topic,department,comment):
     #conn = db_conn()
@@ -122,6 +115,16 @@ def delete(id):
     return redirect(url_for('meetings'))
 
 
+# Tasks
+
+@app.route('/tasks')
+def tasks():
+    return render_template('tasks.html')
+
+
+@app.route('/add_task')
+def add_task():
+    return render_template('add_task.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
