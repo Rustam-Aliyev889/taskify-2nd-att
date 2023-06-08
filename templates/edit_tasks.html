@@ -6,15 +6,15 @@
 <form action="/update_tasks/{{tasks.id}}" method="POST" style="color: beige; font-family: cursive; font-size: large;">
     <div class="col-6 mx-auto mt-3">
         <label for="topic" class="form-label">Task</label>
-        <input type="text" class="form-control" id="task" placeholder="Enter task name" name="task">
+        <input type="text" class="form-control" id="task" placeholder="Enter task name" value="{{tasks.task}}" name="task">
     </div>
     <div class="col-6 mx-auto mt-2">
         <label for="startDate">Due Date</label>
-        <input id="startDate" class="form-control" type="date" name="date" />
+        <input id="startDate" class="form-control" type="date" value="{{tasks.date}}" name="date" />
     </div>
     <div class="col-6 mx-auto mt-3">
         <label class="form-check-label"> Choose department
-            <select class="form-select" aria-label="select menu" name="department">
+            <select class="form-select" aria-label="select menu" value="{{tasks.department}}" name="department">
                 <option selected>Browse departments</option>
                 <option >Engineering</option>
                 <option >Marketing</option>
@@ -25,7 +25,7 @@
     </div>
     <div class="col-6 mx-auto">
         <label class="form-check-label"> Urgent
-            <select class="form-select" aria-label="select menu" name="urgency">
+            <select class="form-select" aria-label="select menu" value="{{tasks.urgency}}" name="urgency">
                 <option selected>Urgent (Yes/No)</option>
                 <option >Yes</option>
                 <option >No</option>
@@ -38,7 +38,7 @@
       </div>-->
     <div class="col-6 mx-auto mt-2">
         <label for="comment">Comments:</label>
-        <textarea class="form-control" rows="3" id="comments" name="comments"></textarea>
+        <textarea class="form-control" rows="3" id="comments" value="{{tasks.value}}" name="comments"></textarea>
     </div>
     <div class="container">
         <div class="col-md-12 text-center mt-4 mb-4">
