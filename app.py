@@ -135,5 +135,40 @@ def new_task():
     return redirect(url_for('tasks'))
 
 
+@app.route('/edit_tasks/<id>', methods = ['POST', 'GET'])
+def get_tasks(id):
+    conn = db_conn()
+    cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+   
+    cur.execute('SELECT * FROM tasks WHERE id = %s', (id))
+    data = cur.fetchall()
+    cur.close()
+    print(data[0])
+    return render_template('edit_tasks.html', tasks = data[0])
+ 
+@app.route('/update_tasks/<id>', methods=['POST'])
+def update_tasks(id):
+    if request.method == 'POST':
+        task = request.form["task"]
+        date = request.form["date"]
+        department = request.form["department"]
+        urgency = request.form["urgency"]
+        comments = request.form["comments"]
+        conn = db_conn()
+        cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+        cur.execute("""
+            UPDATE tasks
+            SET tasks = %s,
+                date = %s,
+                department = %s,
+                urgency = %s,
+                comments = %s
+            WHERE id = %s
+        """, (task, date, department, urgency, comments, id))
+        conn.commit()
+        return redirect(url_for('tasks'))
+    
+
+
 if __name__ == "__main__":
     app.run(debug=True)

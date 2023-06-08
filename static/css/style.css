@@ -26,7 +26,8 @@ img {
 }
 
 #main_page {
-    background-color:rgba(39, 39, 41, 0.3);
+    background-color:rgba(27, 27, 29, 0.3);
+    backdrop-filter: blur(12px);
     /*display: flex;
     justify-content: center;*/
     width: 60%;
