@@ -87,17 +87,6 @@ def update_meetings(id):
         return redirect(url_for('meetings'))
 
 
-@app.route('/delete <id>') #, methods=['POST', 'GET'])
-def delete(id):
-    conn = db_conn()
-    cur = conn.cursor()
-   # id = request.form['id']
-    cur.execute('''DELETE FROM meetings WHERE id = %s''',(id,))
-    conn.commit()
-    cur.close()
-    conn.close()
-    return redirect(url_for('meetings'))
-
 
 # Tasks
 
@@ -158,7 +147,7 @@ def update_tasks(id):
         cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
         cur.execute("""
             UPDATE tasks
-            SET tasks = %s,
+            SET task = %s,
                 date = %s,
                 department = %s,
                 urgency = %s,
@@ -168,6 +157,17 @@ def update_tasks(id):
         conn.commit()
         return redirect(url_for('tasks'))
     
+
+@app.route('/delete_tasks <id>') 
+def delete_tasks(id):
+    conn = db_conn()
+    cur = conn.cursor()
+    cur.execute('''DELETE FROM tasks WHERE id = %s''',(id,))
+    conn.commit()
+    cur.close()
+    conn.close()
+    return redirect(url_for('tasks'))
+
 
 
 if __name__ == "__main__":

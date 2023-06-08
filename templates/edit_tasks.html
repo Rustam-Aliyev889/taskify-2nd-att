@@ -3,7 +3,7 @@
 
 <h3 class="text-primary text-center mt-4" style="font-family: cursive;">Update Task</h3>
 
-<form action="{{ url_for('new_task') }}" method="POST" style="color: beige; font-family: cursive; font-size: large;">
+<form action="/update_tasks/{{tasks.id}}" method="POST" style="color: beige; font-family: cursive; font-size: large;">
     <div class="col-6 mx-auto mt-3">
         <label for="topic" class="form-label">Task</label>
         <input type="text" class="form-control" id="task" placeholder="Enter task name" name="task">
