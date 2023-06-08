@@ -19,5 +19,21 @@ main {
   }
 
 img {
+    position: absolute;
+    width: 100%;
+    filter: brightness(65%);
     z-index: -3;
 }
+
+#main_page {
+    background-color:rgba(39, 39, 41, 0.3);
+    /*display: flex;
+    justify-content: center;*/
+    width: 60%;
+    text-align: center;
+    font-family: cursive;
+    color: rgb(251, 251, 251);
+    filter: brightness(120%);
+}
+
+

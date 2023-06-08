@@ -27,12 +27,22 @@
           </div>
         </div>
       </nav>
-      <img src="https://images.ctfassets.net/gg4ddi543f5b/4eFJbsSwiFKEFXQF2WUq7h/8647b8e7dd59a27cc69a1cf22975b09e/importance-of-project-management-why-choose-careeer-in-project-management.png" class="img-fluid" alt="Taskify" style="position:absolute; width: 100%; filter: brightness(75%);">
+      <img src="https://images.ctfassets.net/gg4ddi543f5b/4eFJbsSwiFKEFXQF2WUq7h/8647b8e7dd59a27cc69a1cf22975b09e/importance-of-project-management-why-choose-careeer-in-project-management.png" class="img-fluid" alt="Taskify">
 
 
-      <main class="container  justify-content-center">
+      <main class="container">
         {% block content %}
-
+        <div class="container" id="main_page">
+          <h1>Taskify</h1>
+          <h3>Hello stranger, and welcome to our modest task manager.
+              Our aim is to make your day easier and help you with your day to day tasks.
+              No lines of data and spreadsheets just simply create your Task/Meeting via 
+              extremely simple procedure and other users will be able to see it on our website.
+              If you changed your mind don't worry you can always update it or delete it.
+              You are only a few clicks away from familiarizing yourself with our service.
+              Just simply click on New Task / New Meeting and enjoy your journey.</h3>
+          <h1>Have a productive day! ;-)</h1>
+        </div>
         {% endblock %}
       </main>
     
@@ -43,19 +53,6 @@
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     
-    <script>
-      const btnDelete= document.querySelectorAll('.btn-delete');
-      if(btnDelete) {
-        const btnArray = Array.from(btnDelete);
-        btnArray.forEach((btn) => {
-          btn.addEventListener('click', (e) => {
-            if(!confirm('Are you sure you want to delete it?')){
-              e.preventDefault();
-            }
-          });
-        })
-      }
-      </script>
 </body>
 
 </html>

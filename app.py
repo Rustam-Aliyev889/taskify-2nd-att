@@ -87,22 +87,6 @@ def update_meetings(id):
         return redirect(url_for('meetings'))
 
 
-
-
-#@app.route("/update", methods=['POST','GET'])
-#def update():#id,topic,department,comment):
-    #conn = db_conn()
-    #cur = conn.cursor()
-    #topic = request.form["topic"]
-    #department = request.form["department"]
-    #comment = request.form["comment"]
-    #cur.execute('''UPDATE meetings SET topic=%s, date=%s, time=%s department=%s, comment=%s WHERE id=%s''', (id,)) #topic, department, comment,))
-    #cur.execute()
-    #conn.commit()
-    #return redirect(url_for('new_meeting'))
-
-
-
 @app.route('/delete <id>') #, methods=['POST', 'GET'])
 def delete(id):
     conn = db_conn()
@@ -117,14 +101,39 @@ def delete(id):
 
 # Tasks
 
-@app.route('/tasks')
+
+@app.route("/tasks")
 def tasks():
-    return render_template('tasks.html')
+    conn = db_conn()
+    cur = conn.cursor()
+    cur.execute('''SELECT * FROM tasks''')
+    tasks = cur.fetchall()
+    cur.close()
+    conn.close()
+    return render_template("tasks.html", tasks= tasks)
 
 
 @app.route('/add_task')
 def add_task():
     return render_template('add_task.html')
+
+
+@app.route("/new_task", methods=["POST"])
+def new_task():
+    conn = db_conn()
+    cur = conn.cursor()
+    task = request.form["task"]
+    date = request.form["date"]
+    department = request.form["department"]
+    urgency = request.form["urgency"]
+    comments = request.form["comments"]
+    query_string="INSERT INTO tasks (task, date, department, urgency, comments) VALUES ('" + task + "','" + date + "','" + department + "','" +  urgency + "','" +  comments + "');"
+    cur.execute(query_string)
+    conn.commit()
+    cur.close()
+    conn.close()
+    return redirect(url_for('tasks'))
+
 
 if __name__ == "__main__":
     app.run(debug=True)
