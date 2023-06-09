@@ -22,6 +22,8 @@ def home():
     return render_template("base.html")
 
 
+# Meetings
+
 @app.route("/meetings")
 def meetings():
     conn = db_conn()
