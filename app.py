@@ -87,6 +87,15 @@ def update_meetings(id):
         return redirect(url_for('meetings'))
 
 
+@app.route('/delete <id>') 
+def delete(id):
+    conn = db_conn()
+    cur = conn.cursor()
+    cur.execute('''DELETE FROM meetings WHERE id = %s''',(id,))
+    conn.commit()
+    cur.close()
+    conn.close()
+    return redirect(url_for('meetings'))
 
 # Tasks
 
