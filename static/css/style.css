@@ -2,7 +2,7 @@ body {
     display: flex;
     min-height: 119vh;
     flex-direction: column;
-    background-image: url('https://images.ctfassets.net/gg4ddi543f5b/4eFJbsSwiFKEFXQF2WUq7h/8647b8e7dd59a27cc69a1cf22975b09e/importance-of-project-management-why-choose-careeer-in-project-management.png');
+    background-image:linear-gradient(rgba(0, 0, 255, 0.6), rgba(212, 212, 1, 0.6)), url('https://images.ctfassets.net/gg4ddi543f5b/4eFJbsSwiFKEFXQF2WUq7h/8647b8e7dd59a27cc69a1cf22975b09e/importance-of-project-management-why-choose-careeer-in-project-management.png');
 }
 
 main {
@@ -27,8 +27,8 @@ img {
 }
 
 #main_page {
-    background-color:rgba(27, 27, 29, 0.3);
-    backdrop-filter: blur(12px);
+    /*background-color:rgba(27, 27, 29, 0.3);
+    backdrop-filter: blur(12px);*/
     width: 60%;
     text-align: center;
     font-family: cursive;
