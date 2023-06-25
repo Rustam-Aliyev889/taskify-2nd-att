@@ -65,6 +65,9 @@ These web pages are the forms which allows you to create and update your records
 -   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 -   [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
 -   [Bootstrap](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework))
+-   [Git](https://git-scm.com/) - Git was used for version control by utilizing the terminal to commit to Git and Push to GitHub.
+-   [GitHub:](https://github.com/) - GitHub is used to store the projects code after being pushed from Git.
+-   [Balsamiq:](https://balsamiq.com/)
 -   [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) - I decided to use RDBMS for this project as its:
 -   RDBMS is based on rows and columns (table). So it is easier to understand RDBMS work.
 -   RDBMS supports more than one user.
@@ -72,13 +75,27 @@ These web pages are the forms which allows you to create and update your records
 -   Security is pretty good for RDBMS.
 
 
+# Testing
+## Testing web page links
+|Test Case| Test|Expected Outcome|Actual Outcome|Comment|
+| ------ | ------ |------ |------ |------ |
+|1| Main page links  functional test for all pages |  launch needed page        |All links launched Main page|n/a|
+|2| Tasks/Meetings  links functional test for all pages | launch needed pages  |all links launched Quiz page|n/a|
+|3| Tasks/Meetings forms links funtional test for all pages  | launch neded pages  |All links launched |n/a|
+|4| Update forms links functional tests for all pages | launch HighScores page          |All links launched correctly|n/a|
+
+## Browser support testing
+The following web browsers were used to test the display of the website including the functionality of the contact us form:
+###### Edge
+###### Chrome
+###### Opera
+###### Safari
 
 
-## Responsive Design Features 
+## Responsive Test 
 -   The App has been made to be responsive on varying sized screens.
 -   The App will resize from the screen of a mobile phone all the way to a full desktop display.
--   Its intended use is for more convinient usage of the service.
--   Even though the intended use is as stated it can still be used on a mobile by a therapist if required.
--   The treatment advice and notes are immediately available to the client after their session.
+-   Its was achieved to make the service more accecible.
+-   Even though it has bee created mainly for desktop it can still be used on a mobile by a user if required.
 
     
