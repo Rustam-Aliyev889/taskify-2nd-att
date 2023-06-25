@@ -57,7 +57,28 @@ These web pages are the forms which allows you to create and update your records
 
 ### Mobile View:<br>
 ![Mobile wireframe](/static/images/wireframes/taskify_phone.png)<br>
+<br>
+
+# Technologies and libraries used 
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+-   [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
+-   [Bootstrap](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework))
+-   [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) - I decided to use RDBMS for this project as its:
+-   RDBMS is based on rows and columns (table). So it is easier to understand RDBMS work.
+-   RDBMS supports more than one user.
+-   As it is advanced it can easily handle huge amounts of data.
+-   Security is pretty good for RDBMS.
 
 
+
+
+## Responsive Design Features 
+-   The App has been made to be responsive on varying sized screens.
+-   The App will resize from the screen of a mobile phone all the way to a full desktop display.
+-   Its intended use is for more convinient usage of the service.
+-   Even though the intended use is as stated it can still be used on a mobile by a therapist if required.
+-   The treatment advice and notes are immediately available to the client after their session.
 
     
