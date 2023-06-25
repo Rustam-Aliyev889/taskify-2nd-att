@@ -49,7 +49,15 @@ These web pages are the forms which allows you to create and update your records
 
 
 # Wireframes
-![Wireframe](/static/images/wireframes/taskify_pc.png)<br><br>
+### Desktop view:<br>
+![Desktop Wireframe](/static/images/wireframes/taskify_pc.png)<br><br>
+
+### Tablet view:<br>
+![Tablet Wireframe](/static/images/wireframes/taskify_tablet.png)<br><br>
+
+### Mobile View:<br>
+![Mobile wireframe](/static/images/wireframes/taskify_phone.png)<br>
+
 
 
     
