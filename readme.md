@@ -30,7 +30,9 @@ This project is a simple task management web application which is based on CRUD 
 
     <img src="/static/images/screenshots/meeting_f.png"><br>
 
-    <img src="/static/images/screenshots/Untitled.png"><br>
+    <img src="/static/images/screenshots/meetings_p.png"><br>
+
+    <img src="/static/images/screenshots/task_p.png"><br>
 
 
     -   #### Frequent User Goals
