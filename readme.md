@@ -119,3 +119,31 @@ The W3C Markup Validator, W3C CSS Validator and JShint Services were used to val
 | Meetings  |  <img src="/static/images/screenshots/meetings.lh.png">  |
 | Add Task | <img src="/static/images/screenshots/tasks-f.lh.png">  |
 | Add Meeting  | <img src="/static/images/screenshots/meeting-f.lh.png">  |
+
+# Bugs
+## To test my code I isolated some parts of it with comments to find out what is might be the problem. I ran into a couple of problems however isolation helped me to figure it out. I also used additional software to see how my functions behave here are some examples:<br>
+
+<br>| Functions  |  Report |
+|---|---|
+| Tasks  | <img src="/static/images/screenshots/task-funk.png"><br>
+ <img src="/static/images/screenshots/task-func1.png"> |
+| Meetings | <img src="/static/images/screenshots/metting-func.png.png"><br>
+<img src="/static/images/screenshots/meeting-func1.png"> |
+| Update Meetings  |  <img src="/static/images/screenshots/update-meeting-func.png">  |
+| Get Task | <img src="/static/images/screenshots/get-task-func.png">  |
+| Delete Task  | <img src="/static/images/screenshots/delete-task-func.png">  |
+| New Task  | <img src="/static/images/screenshots/new-task-func.png">  |
+
+|Bug|Comment|
+| ------ | ------ |
+|Could not connect to database|This was corrected|
+|Could not retrieve data from batabase |Code was included to correct it. Subsequent tests verified it works|
+|Update function did not work|This was fixed and tested to ensure it works|
+|Delete function did not work|This was fixed and tested to ensure it works|
+|I did not understand how to Jinja template works at first so information was not displayed properly|This was fixed and tested to ensure it works|<br>
+
+
+## Deployment
+
+### Where can it be found on GitHub? 
+The GitHub link for the project is - https://github.com/Rustam-Aliyev889/taskify-2nd-att.git
