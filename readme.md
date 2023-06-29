@@ -104,13 +104,8 @@ The following web browsers were used to test the display of the website includin
 -   Its was achieved to make the service more accecible.
 -   Even though it has bee created mainly for desktop it can still be used on a mobile by a user if required.
 
-## Language validation
-The W3C Markup Validator, W3C CSS Validator and JShint Services were used to validate every page of the project to ensure there were no syntax errors in the project.<br>
-
- <img src=""><br>
-
--   [W3C Markup Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Frustam-aliyev889.github.io%2FQuiz%2Findex.html) - Results - No Errors or Warnings
-
+## Additional Testing
+Every page and function of the project was tested to ensure there were no errors in the project.<br>
 
 <img src="/static/images/screenshots/css-test.png"><br>
 
