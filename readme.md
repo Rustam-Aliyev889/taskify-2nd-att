@@ -55,7 +55,7 @@ These web pages are the forms which allows you to create and update your records
 | ![Desktop Wireframe](/static/images/wireframes/taskify_pc.png) | ![Tablet Wireframe](/static/images/wireframes/taskify_tablet.png) | ![Mobile wireframe](/static/images/wireframes/taskify_phone.png) |
 <br>
 
-### Desktop view:<br>
+<!--### Desktop view:<br>
 ![Desktop Wireframe](/static/images/wireframes/taskify_pc.png)<br><br>
 
 ### Tablet view:<br>
@@ -63,7 +63,7 @@ These web pages are the forms which allows you to create and update your records
 
 ### Mobile View:<br>
 ![Mobile wireframe](/static/images/wireframes/taskify_phone.png)<br>
-<br>
+<br>-->
 
 # Technologies and libraries used 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
