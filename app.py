@@ -8,10 +8,10 @@ app = Flask(__name__)
 
 def db_conn():
     conn = psycopg2.connect(
-        host = "localhost",
-        database = "taskmanager",
-        user = "postgres",
-        password = "password",
+        host = "dpg-cioihe5ph6elhbtn9da0-a.oregon-postgres.render.com",
+        database = "taskmanager_d17c",
+        user = "taskmanager_d17c_user",
+        password = "JvqT9guGY2l026uNtkySBbp1hlY5TVbK",
         port = "5432"
     )
     return conn
