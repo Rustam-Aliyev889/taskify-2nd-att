@@ -5,9 +5,9 @@
 This project is a simple task management web application which is based on CRUD functionality. To build this app I used HTML, CSS, Python, Bootstrap, Flask and RDBMS. The app is aiming to help a team to manage their tasks and meetings. I wanted to find a solution for a teams to collaborate more effectively and achieve better results.
 
 
-[View the live project here.]()
+[View the live project here.](https://taskify-vqct.onrender.com/)
 
-<h2 align="center"><img src=""></h2>
+<h2 align="center"><img src="/static/images/screenshots/taskify-mock_up.png"></h2>
 
 ## User Experience (UX/UI)
 
